@@ -1,5 +1,5 @@
 package hu.progmatic.chat.controller;
-
+import hu.progmatic.chat.model.Message;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.stereotype.Controller;
@@ -9,8 +9,7 @@ public class WebSocketController {
 
     @MessageMapping("/hello")
     @SendTo("/topic/chat")
-    public String greet(String string){
-        System.out.println(string);
-        return "hello";
+    public Message greet(Message message){
+        return message;
     }
 }

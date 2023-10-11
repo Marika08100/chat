@@ -12,7 +12,10 @@
 <body>
 <button onclick="connect()">Connect</button>
 <form onsubmit="event.preventDefault(); sendMessage()">
-
+    <label for="nameInput"></label>
+    <input type="text" id="nameInput" placeholder="Your name...">
+    <label for="messageInput"></label>
+    <input type="text" id="messageInput" placeholder="Your message..">
     <button type="submit"> Send</button>
 </form>
 <table>
