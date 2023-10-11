@@ -10,6 +10,7 @@ public class WebSocketController {
     @MessageMapping("/hello")
     @SendTo("/topic/chat")
     public String greet(String string){
+        System.out.println(string);
         return "hello";
     }
 }

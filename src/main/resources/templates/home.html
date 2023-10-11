@@ -11,5 +11,17 @@
 </head>
 <body>
 <button onclick="connect()">Connect</button>
+<form onsubmit="event.preventDefault(); sendMessage()">
+
+    <button type="submit"> Send</button>
+</form>
+<table>
+    <thead>
+    <tr>
+        <th>Message</th>
+    </tr>
+    </thead>
+    <tbody id="messages"></tbody>
+</table>
 </body>
 </html>
